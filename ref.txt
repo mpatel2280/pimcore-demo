@@ -1,0 +1,29 @@
+
+https://pimcore.com/docs/pimcore/10.6/Development_Documentation/Getting_Started/Installation.html
+
+COMPOSER_MEMORY_LIMIT=-1 composer create-project pimcore/skeleton pimcore-project  --ignore-platform-req=ext-intl
+
+OR
+
+COMPOSER_MEMORY_LIMIT=-1 composer create-project pimcore/demo pimcore-project  --ignore-platform-req=ext-intl
+
+mysql -u root -p -e "CREATE DATABASE pimcore_project charset=utf8mb4;"
+
+cd ./pimcore-project
+./vendor/bin/pimcore-install
+
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update -y
+sudo apt-get install php8.2 php8.2-fpm php8.2-mysql libapache2-mod-php8.2 libapache2-mod-fcgid -y
+
+sudo update-alternatives --config php
+
+localhost:85/admin
+
+manish / manish
+
+https://pimcore.com/docs/platform/Pimcore/Installation_and_Upgrade/System_Setup_and_Hosting/Apache_Configuration
+
+https://pimcore.com/docs/platform/Pimcore/Getting_Started/Installation/Webserver_Installation/
+https://pimcore.com/docs/platform/Pimcore/Getting_Started/
